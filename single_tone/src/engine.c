@@ -47,7 +47,8 @@ void engine_process_interleaved_stereo_f32(Engine* e,
                                            int nframes)
 {
     const float sr       = e->sampleRate;
-    const float phaseInc = e->freqHz / sr; // phase in 0..1
+    // phase increment per sample (normalized phase: 0..1)
+    const float phaseInc = e->freqHz / sr;     
     
     float phase          = e->phase;
     float gain           = e->gain;
@@ -59,10 +60,10 @@ void engine_process_interleaved_stereo_f32(Engine* e,
     {
        
        // 1) smooth gain (prevent zipper noise)
-        gain += (target - gain) * a;
+       gain += (target - gain) * a;
        
        // 2) sine oscillator
-        float s = sinf(2.0f * (float)M_PI * phase);
+       float s = sinf(2.0f * (float)M_PI * phase);
        
        // 3) apply gain + optional soft clip
        float y = softclip(s * gain);

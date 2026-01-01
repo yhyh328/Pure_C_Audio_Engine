@@ -73,7 +73,8 @@ int audio_backend_run(Engine* engine, int seconds)
     PaError err = paNoError;
     PaStream* stream = NULL;
 
-    const double sampleRate = 48000.0;   // must match engine_init default in main.c
+    // const double sampleRate = 48000.0;   // must match engine_init default in main.c
+    const double sampleRate = (double)engine->sampleRate;
     const int channels = 2;              // engine renders stereo interleaved
     const unsigned long framesPerBuffer = 256;
 
