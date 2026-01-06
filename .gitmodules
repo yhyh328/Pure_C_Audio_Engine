@@ -1,0 +1,3 @@
+[submodule "TEXT2MIDI"]
+	path = TEXT2MIDI
+	url = git@github.com:yhyh328/TEXT2MIDI.git
