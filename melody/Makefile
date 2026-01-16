@@ -3,8 +3,7 @@
 
 
 CC=gcc
-CFLAGS=-O2 -Wall -Wextra -std=c11 -I/ucrt64/include
-LDFLAGS=
+CFLAGS=-O2 -Wall -Wextra -std=c11 -Iinclude -I/ucrt64/include
 LIBS=-lportaudio -lm
 
 SRC=src/main.c src/engine.c src/audio_backend_pa.c

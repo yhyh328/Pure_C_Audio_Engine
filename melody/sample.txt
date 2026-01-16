@@ -1,0 +1,11 @@
+# tempo in BPM
+tempo 120
+
+# simple melody
+C4 200
+E4 200
+G4 400
+rest 200
+D4 400 80
+
+
