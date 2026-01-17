@@ -3,7 +3,7 @@
 
 
 CC=gcc
-CFLAGS=-O2 -Wall -Wextra -std=c11 -I/ucrt64/include
+CFLAGS=-O2 -Wall -Wextra -std=c11 -Iinclude -I/ucrt64/include
 LDFLAGS=
 LIBS=-lportaudio -lm
 
