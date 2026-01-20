@@ -8,7 +8,10 @@ LDFLAGS=
 LIBS=-lportaudio -lm
 
 SRC=src/main.c src/engine.c src/audio_backend_pa.c
-OUT=pure_sine
+OUT=wave_generator
+
+#OUT=pure_sine
+
 
 all:$(OUT)
 
