@@ -11,7 +11,7 @@
 ## Setup
 ```
 ./install_libraries.sh
-cd mono_tone
+cd single_tone
 make
 ```
 
@@ -19,11 +19,23 @@ make
 ## Run
 
 ```
-./mono_tone/pure_sine.exe [ seconds ] [ frequency ] [ gain ] 
+./single_tone/wave_generator.exe [mode] [ seconds ] [ frequency ] [ gain ]
+
+Adds support for adjusting single_tone generation with the following options:
+- mode: selects waveform style (e.g., sine, square, sawtooth)
+- seconds: duration of the tone playback
+- frequency: frequency in Hz
+- gain: amplitude scaling factor
+
+This update allows users to generate customized pure sine tones
+from the command-line executable.
+
 ```
 <br>
 
 ### Defaults
+
+- Mode: sine
 
 - Duration: 5 seconds
 
@@ -32,10 +44,12 @@ make
 - Gain: 0.2
 
 ```
-./mono_tone/pure_sine.exe
+./single_tone/wave_generator.exe sine
 ```
 
 ### Example
+
+- Mode: square
 
 - Duration: 2 seconds
 
@@ -44,5 +58,5 @@ make
 - Gain: 0.5
 
 ```
-./mono_tone/pure_sine.exe 2 311.13 0.5
+./single_tone/wave_generator.exe square 2 311.13 0.5
 ```
